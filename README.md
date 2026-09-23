@@ -60,7 +60,7 @@ def calculate_maturity_value(principal, annual_rate, tenure_years, n=4):
     return round(maturity_value, 2)
 ```
 
-### the leap year thing (this took me a while to figure out)
+### the leap year thing 
 
 At first I was just doing `start_date + 365 days` to figure out when something matures but that's WRONG because some years have 366 days (leap years, February has 29 days instead of 28). So if I just multiply years x 365 the maturity date ends up being off by a day sometimes. Fixed it by actually adding real calendar months instead of just adding a flat number of days. Python has good date stuff built in for this (the `datetime` module).
 
