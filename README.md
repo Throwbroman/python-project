@@ -1,4 +1,4 @@
-# FD Manager (my Fixed Deposit app)
+# FD Manager (Fixed Deposit app)
 
 Hey! So this is a little app I made to keep track of Fixed Deposits (FDs) for a bank kind of thing. Basically it stores FD info, tells you how much money you'll get when it matures, and warns you if one is about to mature soon so you can call the customer.
 
@@ -12,7 +12,7 @@ I'm still learning Python so go easy on me lol. This is my first "real" project 
 - It shows you which ones are gonna mature in the next 30 days (so you dont forget to call the customer)
 - You can also close an FD early if someone needs their money before it matures (there's a penalty for that, banks do that in real life apparently)
 
-## Files (what's what)
+## Files 
 
 - `app.py` - this is the main file, it's the website basically. run this one
 - `fd_logic.py` - all the math stuff is here (interest calculations etc)
@@ -21,7 +21,7 @@ I'm still learning Python so go easy on me lol. This is my first "real" project 
 - `requirements.txt` - just says "hey you need Flask installed"
 - `BUILD_EXE.md` - if you want to turn this into an actual .exe file you can double click, read this one
 
-## How to run it (do this first)
+## How to run it
 
 1. make sure you have python installed (get it from python.org, and when installing CHECK THE BOX that says "add to PATH" or nothing will work)
 2. open a terminal in this folder
@@ -76,7 +76,7 @@ I made myself test 3 things before calling this "done" (some guide I was followi
 2. closing an FD early - making sure it uses the penalty rate and not the full rate
 3. the "maturing soon" list - made fake FDs that mature in exactly 0 days, 30 days, and 31 days, and checked that the 31 day one does NOT show up (it should only show stuff maturing within 30 days)
 
-## Known issues / stuff I'd fix if I had more time
+## Known issues 
 
 - there's no login/password thing, anyone who opens the app can see/edit/delete everything. probably fine for just messing around on my own laptop but definitely not "production ready"
 - no way to edit an FD once you added it, you can only delete it and re-add it. kinda annoying, i know
