@@ -1,6 +1,6 @@
 # FD Manager (Fixed Deposit app)
 
-Hey! So this is a little app I made to keep track of Fixed Deposits (FDs) for a bank kind of thing. Basically it stores FD info, tells you how much money you'll get when it matures, and warns you if one is about to mature soon so you can call the customer.
+So this is a little app I made to keep track of Fixed Deposits (FDs) for a bank kind of thing. Basically it stores FD info, tells you how much money you'll get when it matures, and warns you if one is about to mature soon so you can call the customer.
 
 I'm still learning Python so go easy on me lol. This is my first "real" project with a database and a website part.
 
@@ -19,7 +19,7 @@ I'm still learning Python so go easy on me lol. This is my first "real" project 
 - `database.py` - this talks to the database (saves your FDs so they dont disappear when you close the app)
 - `templates/` folder - the actual web pages (html files)
 - `requirements.txt` - just says "hey you need Flask installed"
-- `BUILD_EXE.md` - if you want to turn this into an actual .exe file you can double click, read this one
+- `BUILD_EXE.md` - we can turn this into an actual .exe file you can double click, read this one
 
 ## How to run it
 
