@@ -1,6 +1,6 @@
 # FD Manager (Fixed Deposit app)
 
-So this is a little app I made to keep track of Fixed Deposits (FDs) for a bank kind of thing. Basically it stores FD info, tells you how much money you'll get when it matures, and warns you if one is about to mature soon so you can call the customer.
+So this is an app we made to keep track of Fixed Deposits (FDs) for a bank kind of thing. Basically it stores FD info, tells you how much money you'll get when it matures, and warns you if one is about to mature soon so you can call the customer.
 
 I'm still learning Python so go easy on me lol. This is my first "real" project with a database and a website part.
 
