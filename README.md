@@ -1,4 +1,4 @@
-# FD Manager (Fixed Deposit app)
+# FD Manager (Fixed Deposit app)(idea of the program not yet completed)
 
 So this is an app we made to keep track of Fixed Deposits (FDs) for a bank kind of thing. Basically it stores FD info, tells you how much money you'll get when it matures, and warns you if one is about to mature soon so you can call the customer.
 
