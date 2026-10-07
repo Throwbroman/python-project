@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FD Maturity & Renewal Manager</title>
+    <style>
+        :root {
+            --navy: #840e0e;
+            --gold: #f7b646;
+            --bg: #fcfcfc;
+            --card: #ffffff;
+            --text: #1c2733;
+            --muted: #6b7684;
+            --danger: #b3352c;
+            --success: #1e7145;
+            --border: #e2e5ea;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+        }
+        header {
+            background: var(--navy);
+            color: white;
+            padding: 20px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        header h1 {
+            font-size: 20px;
+            margin: 0;
+            font-weight: 600;
+            letter-spacing: 0.2px;
+        }
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 14px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            background: rgba(255,255,255,0.08);
+        }
+        header nav a:hover { background: rgba(255,255,255,0.18); }
+        main {
+            max-width: 1100px;
+            margin: 32px auto;
+            padding: 0 24px;
+        }
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 24px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        th, td {
+            text-align: left;
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--border);
+        }
+        th {
+            color: var(--muted);
+            font-weight: 600;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+        tr.maturing-soon { background: #fff7e6; }
+        tr.status-closed { opacity: 0.6; }
+        .badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 999px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .badge-active { background: #e5f3ea; color: var(--success); }
+        .badge-soon { background: #fdecc8; color: #8a5b00; }
+        .badge-matured { background: #eee; color: var(--muted); }
+        .badge-closed { background: #f7e3e1; color: var(--danger); }
+        .btn {
+            display: inline-block;
+            padding: 9px 16px;
+            border-radius: 6px;
+            border: none;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .btn-primary { background: var(--navy); color: rgb(165, 228, 219); }
+        .btn-primary:hover { background: rgb(160, 206, 123); }
+        .btn-danger { background: transparent; color: var(--danger); border: 1px solid var(--danger); }
+        .btn-danger:hover { background: #fbeceb; }
+        .btn-secondary { background: transparent; color: var(--navy); border: 1px solid var(--border); }
+        form.inline { display: inline; }
+        .empty-state { text-align: center; padding: 48px 16px; color: var(--muted); }
+        .top-actions { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 12px; }
+        .subtitle { color: var(--muted); font-size: 14px; margin-top: 4px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>FD Maturity &amp; Renewal Manager</h1>
+        <nav>
+            <a href="index.html">All FDs</a>
+            <a href="index.html">Maturing Soon</a>
+            <a href="add.html">+ Add FD</a>
+        </nav>
+    </header>
+    <main>
+        <div class="top-actions">
+            <div>
+                <strong style="font-size:18px;">All Fixed Deposits</strong>
+                <div class="subtitle">4 record(s) on file.</div>
+            </div>
+            <a href="add.html" class="btn btn-primary">+ Add FD</a>
+        </div>
+
+        <div class="card">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Account No.</th>
+                        <th>Customer</th>
+                        <th>Principal</th>
+                        <th>Rate</th>
+                        <th>Start Date</th>
+                        <th>Maturity Date</th>
+                        <th>Maturity Value</th>
+                        <th>Days Left</th>
+                        <th>Status</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="maturing-soon">
+                        <td>FD1001</td>
+                        <td>Nagesh</td>
+                        <td>₹1,00,000.00</td>
+                        <td>7.0%</td>
+                        <td>2024-03-15</td>
+                        <td>2025-03-15</td>
+                        <td>₹1,07,185.90</td>
+                        <td>18</td>
+                        <td><span class="badge badge-soon">Maturing soon</span></td>
+                        <td>
+                            <a href="close.html" class="btn btn-secondary" style="padding:6px 10px; font-size:12px;">Close early</a>
+                            <button type="button" class="btn btn-danger" style="padding:6px 10px; font-size:12px;">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>FD1002</td>
+                        <td>mukesh</td>
+                        <td>₹2,50,000.00</td>
+                        <td>6.5%</td>
+                        <td>2024-09-01</td>
+                        <td>2025-09-01</td>
+                        <td>₹2,66,590.40</td>
+                        <td>204</td>
+                        <td><span class="badge badge-active">Active</span></td>
+                        <td>
+                            <a href="close.html" class="btn btn-secondary" style="padding:6px 10px; font-size:12px;">Close early</a>
+                            <button type="button" class="btn btn-danger" style="padding:6px 10px; font-size:12px;">Delete</button>
+                        </td>
+                    </tr>
+                    <tr class="status-closed">
+                        <td>FD1003</td>
+                        <td>mahesh</td>
+                        <td>₹75,000.00</td>
+                        <td>6.0%</td>
+                        <td>2023-12-01</td>
+                        <td>2024-12-01</td>
+                        <td>₹78,890.50 <span class="subtitle">(closed early)</span></td>
+                        <td>—</td>
+                        <td><span class="badge badge-closed">Closed early</span></td>
+                        <td>
+                            <button type="button" class="btn btn-danger" style="padding:6px 10px; font-size:12px;">Delete</button>
+                        </td>
+                    </tr>
+                    <tr class="maturing-soon">
+                        <td>FD1004</td>
+                        <td>rajesh</td>
+                        <td>₹3,20,000.00</td>
+                        <td>7.25%</td>
+                        <td>2024-01-05</td>
+                        <td>2025-01-05</td>
+                        <td>₹3,42,915.20</td>
+                        <td>9</td>
+                        <td><span class="badge badge-soon">Maturing soon</span></td>
+                        <td>
+                            <a href="close.html" class="btn btn-secondary" style="padding:6px 10px; font-size:12px;">Close early</a>
+                            <button type="button" class="btn btn-danger" style="padding:6px 10px; font-size:12px;">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Close FD Early — FD Maturity & Renewal Manager</title>
+    <style>
+        :root {
+            --navy: #10243e; --bg: #f5f6f8; --card: #ffffff; --text: #1c2733;
+            --muted: #6b7684; --border: #e2e5ea;
+        }
+        * { box-sizing: border-box; }
+        body { margin: 0; font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); }
+        header { background: var(--navy); color: white; padding: 20px 32px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+        header h1 { font-size: 20px; margin: 0; font-weight: 600; }
+        header nav a { color: white; text-decoration: none; margin-left: 20px; font-size: 14px; padding: 8px 14px; border-radius: 6px; background: rgba(255,255,255,0.08); }
+        header nav a:hover { background: rgba(255,255,255,0.18); }
+        main { max-width: 1100px; margin: 32px auto; padding: 0 24px; }
+        .card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 24px; max-width: 480px; }
+        .top-actions { margin-bottom: 20px; }
+        .subtitle { color: var(--muted); font-size: 14px; margin-top: 4px; }
+        .field { margin-bottom: 16px; }
+        .field label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px; color: var(--muted); }
+        .field input { width: 100%; padding: 10px 12px; border: 1px solid var(--border); border-radius: 6px; font-size: 14px; }
+        .btn { display: inline-block; padding: 9px 16px; border-radius: 6px; border: none; font-size: 14px; font-weight: 600; cursor: pointer; text-decoration: none; }
+        .btn-primary { background: var(--navy); color: white; }
+        .btn-secondary { background: transparent; color: var(--navy); border: 1px solid var(--border); }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>FD Maturity &amp; Renewal Manager</h1>
+        <nav>
+            <a href="index.html">All FDs</a>
+            <a href="index.html">Maturing Soon</a>
+            <a href="add.html">+ Add FD</a>
+        </nav>
+    </header>
+    <main>
+        <div class="top-actions">
+            <strong style="font-size:18px;">Close FD FD1001 Early</strong>
+            <div class="subtitle">A. Rao — principal ₹1,00,000.00 at 7.0%</div>
+        </div>
+
+        <div class="card">
+            <p style="font-size:14px; color:#6b7684;">
+                The penalty rate on file for this FD is <strong>1.0%</strong>.
+                The effective rate applied will be <strong>6.0%</strong>,
+                calculated only for the time the money was actually held.
+            </p>
+            <form onsubmit="return false;">
+                <div class="field">
+                    <label for="closure_date">Closure date</label>
+                    <input type="date" id="closure_date" name="closure_date" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Confirm Early Closure</button>
+                <a href="index.html" class="btn btn-secondary">Cancel</a>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
