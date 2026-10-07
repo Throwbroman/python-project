@@ -1,0 +1,7 @@
+__pycache__/ 
+*.pyc 
+fd_manager.db 
+venv/ 
+.idea/ 
+dist/ 
+build/ 
